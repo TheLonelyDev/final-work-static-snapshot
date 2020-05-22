@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Final work demo</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="/js/lib/dummy.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">Final work demo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Local Mocking
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./case1.html">Case study</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./localstack.html">LocalStack (AWS)</a>
+
+                        <a class="dropdown-item" href="./kubernetes.html">Kubernetes (AWS + Azure)</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Agnostic Cloud
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./case2.html">Case study</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./terraform.html">Terraform Cloud (AWS + Azure)</a>
+
+                        <a class="dropdown-item" href="./restcloud.html">REST Cloud (AWS + Azure)</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>LocalStack (AWS)</h2>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Unit tests</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Step: npm install</li>
+                            <li class="list-group-item">Step: check deployment</li>
+                            <li class="list-group-item">Step: npm test</li>
+                            <li class="list-group-item">Status: 8/8 tests succeeded </li>
+                        </ul>
+                        <br />
+                        <a href="//192.168.0.118/test=1e40a920-9c68-11ea-bb37-0242ac130002" class="btn btn-success">View
+                            results</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h5>Case information</h5>
+                <div class="alert alert-light" role="alert">Please be informed that this is a static dump of the web
+                    app. Functionality is limited and some content is not accessbile due to firewall restrictions.</div>
+                <ul class="list-group list-group-horizontal-lg">
+                    <li class="list-group-item">LocalStack</li>
+                    <li class="list-group-item">React webapp</li>
+                    <li class="list-group-item">node.js serverless function runtime</li>
+                    <li class="list-group-item">GitLab</li>
+                    <li class="list-group-item">S3 bucket</li>
+                </ul>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col">
+                <h5>Input</h5>
+
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">CSV input</label>
+                        <input type="file" class="form-control-file">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <label class="form-check-label">Parse results locally</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Delimiter</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="," value=",">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <hr />
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Header I</th>
+                            <th scope="col">Header II</th>
+                            <th scope="col">Header III</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Hello world</th>
+                            <th scope="row">My test</th>
+                            <th scope="row">Fingers crossed</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <h5>AWS Output (actual environment)</h5>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Header I</th>
+                            <th scope="col">Header II</th>
+                            <th scope="col">Header III</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Hello world</th>
+                            <th scope="row">My test</th>
+                            <th scope="row">Fingers crossed</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <h5>AWS Output (own environment)</h5>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Header I</th>
+                            <th scope="col">Header II</th>
+                            <th scope="col">Header III</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Hello world</th>
+                            <th scope="row">My test</th>
+                            <th scope="row">Fingers crossed</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
